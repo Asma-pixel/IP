@@ -17,7 +17,8 @@ body {
 }
 .wrapper {
   display: flex;
-  width: 90%;
+  flex-direction: column;
+  width: 70%;
   height: 100%;
   background-color: $white;
 }
@@ -53,34 +54,134 @@ header {
   a {
     text-decoration: none;
     color: black;
-    background-image: linear-gradient($main, $main);
+    background-image: linear-gradient($main-hover, $main-hover);
     background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: 0% 2px;
   }
   a:hover {
     background-size: 100% 2px;
-    color: $main;
+    color: $main-hover;
     transition: background-size 0.4s;
   }
 }
 
-.header-btn {
+.btn {
   margin-right: 24px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  background-color: $main;
-  padding: 5px 25px;
-  border-radius: 15px;
+  background-image: linear-gradient(
+    to right,
+    $main 20%,
+    $main-hover 52%,
+    $main 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+  padding: 10px 35px;
+  border-radius: 25px;
   a {
     color: $white;
     text-decoration: none;
   }
   &:hover {
+    background-position: right center;
+  }
+}
+.about {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+.carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.owl-stage-outer {
+  height: 100%;
+}
+.owl-stage {
+  height: 100%;
+}
+.owl-item {
+  display: flex;
+  background-image: url("../img/carouselImage.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+.wrapper-items {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 70px;
+}
+.item-side {
+  display: flex;
+  width: 50%;
+
+  color: azure;
+  text-align: center;
+}
+.item-side:nth-child(1) {
+  align-self: center;
+}
+.item-side:nth-child(2) {
+  align-self: flex-end;
+  justify-content: flex-end;
+
+  .btn {
+    margin: 0 30px 15px 0;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    padding: 25px 55px;
+    border-radius: 0;
+    border: 1px solid $main-hover;
+    background-image: none;
+    background-color: transparent;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    position: relative;
+  }
+  .btn::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)
+    );
+    height: 85px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -85px;
+    transform: skewX(-45deg);
+  }
+  .btn:hover {
     background-color: $main-hover;
-    transition: all 0.3s;
+    transition: all 0.5s;
+  }
+  .btn:hover::before {
+    left: 250px;
+    transition: 0.5s ease-in-out;
+  }
+}
+.one-side {
+  justify-content: center;
+  .item-side {
+    width: 50%;
+   
   }
 }

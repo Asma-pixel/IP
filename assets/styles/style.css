@@ -23,7 +23,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
   height: 100%;
   background-color: #FFFF;
 }
@@ -75,8 +79,8 @@ header {
 .header-text a {
   text-decoration: none;
   color: black;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#804FE8), to(#804FE8));
-  background-image: linear-gradient(#804FE8, #804FE8);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2f0981), to(#2f0981));
+  background-image: linear-gradient(#2f0981, #2f0981);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
@@ -84,31 +88,158 @@ header {
 
 .header-text a:hover {
   background-size: 100% 2px;
-  color: #804FE8;
+  color: #2f0981;
   -webkit-transition: background-size 0.4s;
   transition: background-size 0.4s;
 }
 
-.header-btn {
+.btn {
   margin-right: 24px;
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
-  background-color: #804FE8;
-  padding: 5px 25px;
-  border-radius: 15px;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(20%, #804FE8), color-stop(52%, #2f0981), to(#804FE8));
+  background-image: linear-gradient(to right, #804FE8 20%, #2f0981 52%, #804FE8 100%);
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 10px 35px;
+  border-radius: 25px;
 }
 
-.header-btn a {
+.btn a {
   color: #FFFF;
   text-decoration: none;
 }
 
-.header-btn:hover {
+.btn:hover {
+  background-position: right center;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.owl-stage-outer {
+  height: 100%;
+}
+
+.owl-stage {
+  height: 100%;
+}
+
+.owl-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../img/carouselImage.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.wrapper-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 70px;
+}
+
+.item-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  color: azure;
+  text-align: center;
+}
+
+.item-side:nth-child(1) {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.item-side:nth-child(2) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.item-side:nth-child(2) .btn {
+  margin: 0 30px 15px 0;
+  font-size: 25px;
+  display: inline-block;
+  text-align: center;
+  padding: 25px 55px;
+  border-radius: 0;
+  border: 1px solid #2f0981;
+  background-image: none;
+  background-color: transparent;
+  overflow: hidden;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+
+.item-side:nth-child(2) .btn::before {
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.5)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5));
+  height: 85px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -85px;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+}
+
+.item-side:nth-child(2) .btn:hover {
   background-color: #2f0981;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.item-side:nth-child(2) .btn:hover::before {
+  left: 250px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.one-side {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.one-side .item-side {
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */
