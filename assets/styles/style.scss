@@ -1,4 +1,5 @@
 @import "colors";
+@import "keyframes";
 
 * {
   margin: 0;
@@ -182,6 +183,80 @@ header {
   justify-content: center;
   .item-side {
     width: 50%;
-   
   }
+}
+.services {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 25px;
+}
+.wrapper-services {
+  display: flex;
+  padding: 50px;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+.title-section {
+  display: inline-block;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.types-services {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-column {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 24px;
+  div {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 24px;
+    background: linear-gradient(
+        134.11deg,
+        rgba(44, 39, 39, 0) 57.39%,
+        #e5e5e5 90%
+      ),
+      #c4c4c4;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    color: azure;
+    font-size: 27px;
+  }
+}
+.description-service {
+  margin: 24px 0 0 64px;
+  list-style: none;
+  li {
+    padding: 6px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  li:before {
+    padding-right: 10px;
+    font-weight: bold;
+    color: #c0c0c0;
+    content: "\2714";
+    transition-duration: 0.5s;
+  }
+  li:hover:before {
+    color: $main;
+    content: "\2714";
+  }
+}
+.companies {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
