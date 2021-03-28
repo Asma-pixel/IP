@@ -241,6 +241,7 @@ header {
     cursor: pointer;
     font-size: 24px;
     margin-top: 10px;
+    transition: 0.4s;
   }
   li:before {
     padding-right: 10px;
@@ -259,4 +260,12 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.hidden-description {
+  display: none;
+}
+.open-description {
+  display: block;
+  margin: 18px 0 0 36px;
+  animation: slideDown 0.3s ease;
 }
