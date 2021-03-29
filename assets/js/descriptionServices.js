@@ -3,8 +3,9 @@ export function descriptionServices(params) {
     let  description;
     parentDescription.forEach(item => {
         item.addEventListener('click', (e) => {
+            item.classList.toggle('active');
             description = item.querySelector('p');
-            console.log (description);
+            console.log (e.target.className);
             description.classList.toggle('open-description');
         });
     });

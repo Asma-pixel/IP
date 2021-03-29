@@ -358,6 +358,7 @@ header {
           transition-duration: 0.5s;
 }
 
+.description-service .active::before,
 .description-service li:hover:before {
   color: #804FE8;
   content: "\2714";

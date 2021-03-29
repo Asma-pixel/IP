@@ -250,6 +250,7 @@ header {
     content: "\2714";
     transition-duration: 0.5s;
   }
+  .active::before,
   li:hover:before {
     color: $main;
     content: "\2714";
