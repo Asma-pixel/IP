@@ -77,6 +77,14 @@ header {
           align-items: center;
 }
 
+.burger {
+  display: none;
+  height: 40px;
+  width: 40px;
+  background-color: antiquewhite;
+  margin-right: 24px;
+}
+
 .brand {
   margin-left: 24px;
   font-family: Luckiest Guy;
@@ -358,7 +366,7 @@ header {
           transition-duration: 0.5s;
 }
 
-.description-service .active::before,
+.description-service .selected::before,
 .description-service li:hover:before {
   color: #804FE8;
   content: "\2714";
@@ -387,5 +395,22 @@ header {
   margin: 18px 0 0 36px;
   -webkit-animation: slideDown 0.3s ease;
           animation: slideDown 0.3s ease;
+}
+
+@media only screen and (max-width: 1347px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .right-side {
+    display: none;
+  }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */

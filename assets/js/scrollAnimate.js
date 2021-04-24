@@ -10,8 +10,6 @@ export function scrollAnimate(params) {
                 behavior:'smooth',
                 block: 'start',
             });
-            console.log(anchor);
-
         });
     });
 

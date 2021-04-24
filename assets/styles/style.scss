@@ -34,6 +34,13 @@ header {
   display: flex;
   align-items: center;
 }
+.burger {
+  display: none;
+  height: 40px;
+  width: 40px;
+  background-color: antiquewhite;
+  margin-right: 24px;
+}
 .brand {
   margin-left: 24px;
   font-family: Luckiest Guy;
@@ -250,7 +257,7 @@ header {
     content: "\2714";
     transition-duration: 0.5s;
   }
-  .active::before,
+  .selected::before,
   li:hover:before {
     color: $main;
     content: "\2714";
@@ -269,4 +276,17 @@ header {
   display: block;
   margin: 18px 0 0 36px;
   animation: slideDown 0.3s ease;
+}
+@media only screen and (max-width: 1347px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .right-side {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
 }
